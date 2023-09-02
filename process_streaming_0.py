@@ -37,7 +37,7 @@ HOST = "localhost"
 PORT = 9999
 ADDRESS_TUPLE = (HOST, PORT)
 INPUT_FILE_NAME = "batchfile_0_farenheit.csv"
-INPUT_FILE_PATH = "C:\\Users\\garre\\.venv\\Mod_2\\streaming-02-multiple-processes\\batchfile_0_farenheit.csv"
+
 # Define program functions (bits of reusable code)
 
 

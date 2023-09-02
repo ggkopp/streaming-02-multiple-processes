@@ -1,7 +1,26 @@
-In the console, type clear and hit Enter or Return. 
+PS C:\Users\garre\.venv\Mod_2\streaming-02-multiple-processes> & C:/Users/garre/AppData/Local/Microsoft/WindowsApps/python3.10.exe c:/Users/garre/.venv/Mod_2/streaming-02-multiple-processes/multiple_processes.py
+2023-09-01 19:47:06,071 - INFO - 
+======================================================================
+STARTING UP.............................
+  Date and Time:    2023-09-01 at 07:47 PM
+  Operating System: nt Windows 10
+  Python Version:   3.10.11
+  Path to Interpreter:  C:\Users\garre\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\python.exe     
+======================================================================
 
-This will clear the console output. 
-
-Run the file once while the tasks are longer. 
-
-Copy and paste the terminal results (when task_duration is 3) here.
+2023-09-01 19:47:06,072 - INFO - Called recreate_database().
+2023-09-01 19:47:06,072 - INFO - Called drop_table().
+2023-09-01 19:47:06,081 - INFO - Table 'pets' dropped successfully.
+2023-09-01 19:47:06,081 - INFO - Called create_table().
+2023-09-01 19:47:06,086 - INFO - Table 'pets' created successfully.
+2023-09-01 19:47:06,198 - INFO - Called process_one().
+2023-09-01 19:47:06,199 - INFO -   Called insert_pet() with process=P1, name=Ace, breed=Dog.
+2023-09-01 19:47:06,227 - INFO - Called process_two().
+2023-09-01 19:47:06,227 - INFO -   Called insert_pet() with process=P2, name=Cooper, breed=Rabbit.
+2023-09-01 19:47:06,250 - INFO - Called process_three().
+2023-09-01 19:47:06,251 - INFO -   Called insert_pet() with process=P3, name=Emma, breed=Rabbit.
+2023-09-01 19:47:09,215 - INFO -   Called insert_pet() with process=P1, name=Buddy, breed=Dog.
+2023-09-01 19:47:11,746 - ERROR - ERROR while P3 inserting pet Emma: database is locked
+2023-09-01 19:47:11,748 - INFO -   Called insert_pet() with process=P3, name=Felix, breed=Cat.
+2023-09-01 19:47:11,777 - ERROR - ERROR while P2 inserting pet Cooper: database is locked
+2023-09-01 19:47:11,778 - INFO -   Called insert_pet() with process=P2, name=Dingo, breed=Dog.
