@@ -20,33 +20,70 @@ hitting a shared database at the same time.
 
 Fork this repository ("repo") into **your** GitHub account. 
 
+## Task 1 complete
+
 ## Task 2. Clone
 
 Clone **your** new GitHub repo down to the Documents folder on your local machine. 
+
+## Task 2 complete
 
 ## Task 3. Explore
 
 Explore your new project repo in VS Code on your local machine.
 
+## Task 3 complete
+
 ## Task 4. Execute Check Script
 
 Execute 00_check_core.py to generate useful information.
+
+## Task 4 Complete
 
 ## Task 5. Execute Multiple Processes Project Script
 
 Execute multiple_processes.py.
 
+## Done
+
 Read the output. Read the code. 
 Try to figure out what's going on. 
 
 1. What libraries did we import?
-1. Where do we set the TASK_DURATION_SECONDS?
-1. How many functions are defined? 
+datetime
+logging
+time
+multiprocessing
+os
+platform
+sqlite3
+sys
+1. Where do we set the TASK_DURATION_SECONDS? where we declare the program constance
+1. How many functions are defined? 9 defined functions
 1. What are the function names? 
+recreate_database()
+create_table()
+drop_table()
+insert_pet(process, name, breed)
+process_one()
+process_two()
+process_three()
+prepare_message_from_row(row)
+stream_row(input_file_name, address_tuple)
 1. In general, what does each function do? 
+recreate_database(): Drops and recreates the database.
+create_table(): Creates a table in the database.
+drop_table(): Drops the table if it exists.
+insert_pet(process, name, breed): Inserts a pet into the "pets" table.
+process_one(): Represents the first process inserting pets into the database.
+process_two(): Represents the second process inserting pets into the database.
+process_three(): Represents the third process inserting pets into the database.
+prepare_message_from_row(row): Prepares a binary message from a given row (used in the streaming code).
+stream_row(input_file_name, address_tuple): Reads from an input file, streams data, and writes to an output file (used in the streaming code).
 1. Where does the execution begin? Hint: generally at the end of the file.
-1. How many processes do we start?
-1. How many records does each process insert?
+    on this line "if __name__ == "__main__":"
+1. How many processes do we start? 3 processes
+1. How many records does each process insert? 2
 
 In this first run, we start 3 processes, 
 each inserting 2 records into a shared database 
@@ -59,6 +96,8 @@ It inserts a record, and exits the database quickly.
 In general, we're successful and six new records get inserted. 
 
 ## Task 6. Execute Multiple Processes Script with Longer Tasks
+
+## Done
 
 For the second run, modify the task duration to make each task take 3 seconds. 
 Hint: Look for the TODO.
@@ -78,9 +117,11 @@ To document results, clear the terminal, run the script, and paste all of the te
 
 Use out0.txt to document the first run. 
 
+## done
+
 Use out3.txt to document the second run.
 
-
+## done
 -----
 
 ## Helpful Information
@@ -120,13 +161,13 @@ and share them in our discussion.
 Python has pretty helpful error messages. 
 When you get an error, read them carefully. 
 
-- What error do you get?
+- What error do you get? "database is locked"
 
 ### Database Is Locked Error
 
 Do a web search on the sqlite3 'database is locked' error.
 
-- What do you learn?
+- What do you learn? Seems that this happens when multiple process's are trying to access the db at the same time. 
 - Once a process fails, it crashes the main process and everything stops. 
 
 ### Deadlock
